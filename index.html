@@ -36,8 +36,12 @@
     // Assign unique scroll event to each scrollable element
     scrollables.forEach((scrollable, index) => {
       scrollable.addEventListener('scroll', () => {
-        console.log(`Scroll event for scrollable ${index + 1}`);
-        // Add your scroll functionality here for each scrollable element
+        // Check if scrolled to the bottom
+        if (scrollable.scrollTop + scrollable.clientHeight >= scrollable.scrollHeight) {
+          // Perform an action when scrolled to the bottom
+          console.log(`Scrolled to the bottom of scrollable ${index + 1}`);
+          // Add your custom code here
+        }
       });
     });
   </script>
