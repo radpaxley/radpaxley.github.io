@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .task {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f5f5f5;
+      margin: 20px;
+      max-width: 500px;
+      overflow-y: scroll;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="task" id="scroll1">
+    <!-- Place your task content here -->
+  </div>
+
+  <div class="task" id="scroll2">
+    <!-- Place your task content here -->
+  </div>
+
+  <div class="task" id="scroll3">
+    <!-- Place your task content here -->
+  </div>
+
+  <script>
+    // Get the scrollable elements
+    const scrollables = document.querySelectorAll('.task');
+
+    // Assign unique scroll event to each scrollable element
+    scrollables.forEach((scrollable, index) => {
+      scrollable.addEventListener('scroll', () => {
+        console.log(`Scroll event for scrollable ${index + 1}`);
+        // Add your scroll functionality here for each scrollable element
+      });
+    });
+  </script>
+</body>
+</html>
